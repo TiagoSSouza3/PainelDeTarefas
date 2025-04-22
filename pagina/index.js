@@ -244,7 +244,6 @@ function excluirTarefa(tarefaId) {
         verificarTarefasMostrar(listaTarefasAtual);
     }
 };
-  
 
 function excluirSubTarefa(subTarefaId) {
     var [tarefaIndex, subIndex] = subTarefaId.split('.').map(Number);
@@ -256,7 +255,6 @@ function excluirSubTarefa(subTarefaId) {
     }
 };
 
-
 var endereço = "";
 function abrirTabAddTarefa() {
     document.getElementById("aside").style.visibility = "visible";
@@ -265,6 +263,14 @@ function abrirTabAddTarefa() {
 };
 
 function abrirTabAddTarefa(tarefaID) {
+    const titulo = document.getElementById("txtTitulo");
+    const descricao = document.getElementById("txtDescricao");
+    const dataDeEntrega = document.getElementById("txtData");
+    
+    titulo.value = "";
+    descricao.value = "";
+    dataDeEntrega.value = "";
+
     document.getElementById("aside").style.visibility = "visible";
 
     endereço = tarefaID;
@@ -286,6 +292,18 @@ function addTarefa() {
     listaTarefasAtual = tarefasTodas
     verificarTarefasMostrar(tarefasTodas);
 };
+
+function cancelar(){
+    const titulo = document.getElementById("txtTitulo");
+    const descricao = document.getElementById("txtDescricao");
+    const dataDeEntrega = document.getElementById("txtData");
+    
+    titulo.value = "";
+    descricao.value = "";
+    dataDeEntrega.value = "";
+
+    document.getElementById("aside").style.visibility = "hidden";
+}
 
 function criarTarefa(titulo, descricao, dataDeEntrega, tarefaId = ""){
     var status = "pendente";

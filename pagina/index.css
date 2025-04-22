@@ -154,7 +154,6 @@ aside #divCentralizada input[type="text"], input[type="date"]{
 
 aside #divCentralizada input[type="button"]{
     float: left;
-    background-color: green;
     font-size: 18px;
     border-style: solid;
     border-radius: 100px;
@@ -165,7 +164,15 @@ aside #divCentralizada input[type="button"]{
     outline: none;
 }
 
-aside #divCentralizada input[type="button"]:hover {
+aside #divCentralizada #btnAddTarefa{
+    background-color: green;
+}
+
+aside #divCentralizada #btnCancelar{
+    background-color: red;
+}
+
+aside #divCentralizada #btnAddTarefa:hover, aside #divCentralizada #btnCancelar:hover{
     background-color: white;
 } 
 
