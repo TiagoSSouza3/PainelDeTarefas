@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: flex;
+    width: 70vw;
+    background-color: white;
+    justify-content: center;
+    padding: 20px;
+}
+
+#divPreferencias {
+    display: flex;
+    margin: 3px;
+}
+
+#divPreferencias div {
+    margin: 0 50px 0 0;
+}
+
+#divBusca {
+    border: solid 1px;
+    border-radius: 15px;
+    max-height: 34px;
+    width: 600px;
+    max-width: 70vw;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border-style: hidden;
+    height: 32px;
+    width: 520px;
+    outline: none;
+}
+
+#txtBusca:focus {
+    outline: none;
+}
+
+#btnBusca, #btnAbrirTabAddTarefa {
+    height: 32px;
+}
+
+#btnExcluirTarefa{
+    height: 24px;
+}
+
+#divTarefas{
+    max-width: 50vw;
+}
+
+#listaTarefas{
+    background-color: white;
+    padding: 10px;
+}
+
+#listaTarefas li {
+    margin: 5px 0;
+    max-width: 50vw;
+    list-style-type: none;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 5px;
+    display: flex;
+}
+
+li[draggable="true"] {
+    cursor: move;
+}
+
+
+#header-tarefa{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50vw;
+    width: 40vw;
+}
+
+#status-tarefa{
+    width: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#titulo-tarefa{
+    justify-self: center;
+    align-items: start;
+    font-weight: bold;
+}
+
+#data-tarefa{
+    padding-right: 20px;
+}
+
+#descricao-tarefa{
+    word-break: break-all;
+}
+
+#descricao-tarefa-container{
+    max-width: 50vw;
+}
+
+#conteudo-container{
+    width: 41vw;
+}
+
+.pendente{
+    background-color: rgb(255, 131, 131);
+}
+
+.normal{
+    background-color: white;
+}
+
+#aside {
+    visibility: hidden;
+
+    display: grid;
+    width: 30vw;
+    height: 100vw;
+    background-color: lightgreen;
+    justify-content: center;
+    padding: 20px;
+}
+
+aside #divCentralizada{
+    text-align: center;
+    font-size: 32px;
+    width: 350px;
+    max-width: 30vw;
+}
+
+aside #divCentralizada input[type="text"], input[type="date"]{
+    float: left;
+    background-color: transparent;
+    font-size: 18px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 2px 10px;
+    margin: 10px 0;
+    height: 32px;
+    width: 320px;
+    outline: none;
+}
+
+aside #divCentralizada input[type="button"]{
+    float: left;
+    background-color: green;
+    font-size: 18px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 2px;
+    margin: 10px 0;
+    height: 32px;
+    width: 200px;
+    outline: none;
+}
+
+aside #divCentralizada input[type="button"]:hover {
+    background-color: white;
+} 
+
+aside #divCentralizada input:focus {
+    outline: none;
+}

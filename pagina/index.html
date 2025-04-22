@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../pagina/index.css" />
+
+    <script src="../pagina\index.js"></script>
+
+    <title>Tarefas</title>
+</head>
+<body>
+    <section id="main">
+        <div id="divCentralizada">
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <img src="../midia/lupa.png" id="btnBusca" alt="Buscar" onclick="buscar()"/>
+                <img src="../midia/mais.png" id="btnAbrirTabAddTarefa" alt="Adicionar" onclick="abrirTabAddTarefa()"/>
+            </div>
+            <div id="divPreferencias">
+                <div>
+                    <input type="checkbox" id="ckbPendentes" onclick="verificarTarefasMostrar()"/> Pendentes <span id="numPendentes"></span>
+                </div>
+                <div>
+                    <input type="checkbox" id="ckbConcluidos" onclick="verificarTarefasMostrar()"/> Concluidos <span id="numConcluidos"></span>
+                </div>
+            </div>
+            <div id="divTarefas">
+                <ul id="listaTarefas">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <aside id="aside">
+        <div id="divCentralizada">
+            Adicionar Tarefa
+            <input type="text" id="txtTitulo" placeholder="Titulo"/>
+            <input type="text" id="txtDescricao" placeholder="Descrição"/>
+            <input type="date" id="txtData"/>
+            <input type="button" id="btnAddTarefa" onclick="addTarefa()" value="Adicionar"/>
+        </div>
+    </aside>
+</body>
+</html>
