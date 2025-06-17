@@ -1,12 +1,12 @@
 var tarefasTodas = [];
 var listaTarefasAtual = [];
 let draggedIndex = null;
-
+const placeholder = "Buscar..."
 
 function mostrarTarefas(listaDeTarefas) {
     const listaTarefas = document.getElementById("listaTarefas");
     listaTarefas.innerHTML = "";
-    
+
     listaDeTarefas.forEach((tarefa, index) => {
         const tarefaId = `${index + 1}`;
 
@@ -222,8 +222,13 @@ function verificarTarefasMostrar(listaFiltrar = tarefasTodas){
     }
 };
 
+function mudarPlaceholder(){
+    document.getElementById("txtBusca").placeholder = "";
+}
+
 function buscar(){
     var busca = document.getElementById("txtBusca").value;
+    document.getElementById("txtBusca").placeholder = placeholder;
     
     if (busca != ""){
         var listaBusca = tarefasTodas.filter(tarefa => tarefa.titulo == busca);
