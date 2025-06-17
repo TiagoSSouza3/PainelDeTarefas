@@ -6,7 +6,7 @@ let draggedIndex = null;
 function mostrarTarefas(listaDeTarefas) {
     const listaTarefas = document.getElementById("listaTarefas");
     listaTarefas.innerHTML = "";
-
+    
     listaDeTarefas.forEach((tarefa, index) => {
         const tarefaId = `${index + 1}`;
 
