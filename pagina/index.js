@@ -1,7 +1,13 @@
+const placeholder = "Buscar..."
+
 var tarefasTodas = [];
 var listaTarefasAtual = [];
+
 let draggedIndex = null;
-const placeholder = "Buscar..."
+
+function onInit() {
+    verificarTarefasMostrar()
+}
 
 function mostrarTarefas(listaDeTarefas) {
     const listaTarefas = document.getElementById("listaTarefas");
